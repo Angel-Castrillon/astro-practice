@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
+.font-title {
+    font-family: "Merienda", cursive;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+:root {
+    --pinky-color: #FF8383;
+    --yellow-color: #FFF574;
+    --green-color: #A1D6CB;
+    --purple-color: #A19AD3;
+
+}

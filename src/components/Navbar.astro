@@ -1,0 +1,60 @@
+---
+
+
+---
+<header class="fixed left-1/2 -translate-x-1/2 lg:w-1/2 w-full top-0 bg-[#0a0f29]/70 z-10 backdrop-blur-sm border-b border-indigo-700/30 rounded-b-full px-8 ">
+    <nav class="flex flex-col md:flex-row items-center justify-between w-full py-4">
+        <!-- Logo and Toggle (top bar on mobile) -->
+        <div class="flex justify-between items-center w-full md:w-auto">
+            <a href="/" class="flex items-center font-title text-[#c2e8ff] text-xl font-semibold">
+                Miaunagment
+                <img class="w-[45px] h-[45px] ml-2" src="/src/assets/cat-svgrepo-com.svg" alt="cat-icon"/>
+            </a>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-white p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Navigation links (hidden on mobile by default) -->
+        <div id="mobile-menu" class="hidden md:flex flex-col md:flex-row items-center space-y-4 md:space-y-0 space-x-0 md:space-x-4 font-semibold md:mx-4 md:flex-1 md:justify-center w-full md:w-auto">
+            <a href="/dashboard" class="block w-full text-center px-4 py-2 hover:text-[#c2e8ff] transition-colors">Dashboard</a>
+            <a href="/management/actions" class="block w-full text-center px-4 py-2 hover:text-[#c2e8ff] transition-colors">Actions</a>
+            <a href="/management/reports" class="block w-full text-center px-4 py-2 hover:text-[#c2e8ff] transition-colors">Persona</a>
+            <a href="/settings" class="block w-full text-center px-4 py-2 hover:text-[#c2e8ff] transition-colors">Settings</a>
+        </div>
+
+        <!-- Theme toggle -->
+        <label class="inline-flex items-center me-5 cursor-pointer" id="theme-toggle">
+            <input type="checkbox" value="" class="sr-only peer">
+            <div class="relative w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-teal-300 dark:peer-focus:ring-teal-800 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-teal-600 dark:peer-checked:bg-teal-600"></div>
+        </label>
+    </nav>
+</header>
+
+<script>
+// Toggle mobile menu
+const mobileMenuButton = document.getElementById('mobile-menu-button') as HTMLButtonElement | null;
+
+if (mobileMenuButton) {
+  mobileMenuButton.addEventListener('click', () => {
+    const menu = document.getElementById('mobile-menu') as HTMLElement | null;
+    if (menu) {
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('flex');
+    }
+  });
+
+// Theme toggle
+const themeToggle = document.getElementById('theme-toggle') as HTMLButtonElement | null;
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+  });
+}
+}
+</script>
