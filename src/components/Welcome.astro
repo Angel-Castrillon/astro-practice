@@ -1,34 +1,61 @@
 ---
+import Navbar from "./Navbar.astro";
 ---
 
 <!-- Main content area with padding to account for fixed header and sidebar -->
-<main class="min-h-[calc(100vh-4rem)] flex items-center justify-center pt-16">
-    <div class="w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <section class="w-full">
-            <h1 class="text-4xl font-extrabold text-center pb-12">App Manager</h1>
-            <div class="grid grid-cols-7 grid-rows-3 gap-4">
-                <div class="col-start-2 col-span-1 row-span-1 border-radius-lg overflow-hidden">
-                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1652804961521-c9fbc7a3f0f1?q=80&w=689&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+<Navbar />
+<div class="relative py-26 h-[calc(100vh-4rem)] z-20">
+    <div class="fixed w-full max-w-7xl px-4 sm:px-6 lg:px-8 h-screen">
+        <div class="flex items-center">
+            <section class="w-full h-screen ">
+                <h1 class="text-3xl font-bold text-center py-8">App Manager</h1>
+                <div class="grid grid-cols-7 grid-rows-4 gap-4 ">
+                    <div class="col-start-2 col-span row-span-1 border-radius-lg overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1617854818583-09e7f077a156?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
                 </div>
 
                 <div class="row-start-2 col-span-2 row-span-2 border-radius-lg overflow-hidden">
-                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1652804961521-c9fbc7a3f0f1?q=80&w=689&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1617854818583-09e7f077a156?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
                 </div>
 
                 <div class="col-start-3 col-span-3 row-span-3 border-radius-lg overflow-hidden">
-                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1652804961521-c9fbc7a3f0f1?q=80&w=689&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1617854818583-09e7f077a156?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
                 </div>
 
                 <div class="col-start-6 col-span-2 row-span-2 border-radius-lg overflow-hidden">
-                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1652804961521-c9fbc7a3f0f1?q=80&w=689&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1617854818583-09e7f077a156?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
                 </div>
                 <div class="col-start-6 col-span-1 row-span-1 border-radius-lg overflow-hidden">
-                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1652804961521-c9fbc7a3f0f1?q=80&w=689&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1617854818583-09e7f077a156?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
                 </div>
             </div>
         </section>
+        </div>
     </div>
-</main>
+</div>
+<section class=" relative h-[100vh]">
+    <div class="sticky top-0 h-screen flex items-center justify-center bg-amber-50 z-50">
+        <h2 class="text-3xl font-bold">Title</h2>
+        <div>
+            <p>Paragraph</p>
+        </div>
+    </div>
+</section>
 
-<!-- Add some spacing at the bottom of the page -->
-<div class="h-16"></div>
+
+<!-- <body class="relative bg-white text-black">
+
+    <section class="fixed top-0 left-0 w-full h-screen z-0 flex items-center justify-center bg-white">
+      <h1 class="text-5xl font-bold">Sección Fija / Portada</h1>
+    </section>
+  
+
+    <div class="h-screen"></div>
+  
+
+    <section class="relative z-10 h-[200vh] bg-black text-white">
+      <div class="sticky top-0 h-screen flex items-center justify-center">
+        <h2 class="text-4xl">Contenido que tapa</h2>
+      </div>
+    </section>
+  </body> -->
