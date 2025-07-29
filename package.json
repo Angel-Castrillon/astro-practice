@@ -15,5 +15,8 @@
     "photoswipe": "^5.4.4",
     "swiper": "^11.2.10",
     "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "@types/swiper": "^5.4.3"
   }
 }

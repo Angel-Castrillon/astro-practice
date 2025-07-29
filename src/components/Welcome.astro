@@ -5,38 +5,67 @@ import squarePlaceholder from '../assets/images/square.png';
 
 
 const images = [
+  'https://images.unsplash.com/photo-1516383074327-ac4841225abf?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   'https://images.unsplash.com/photo-1649923625793-af1cbd33c8bd?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1521907236370-15adf2297445?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1588022274642-f238f77ec193?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   'https://images.unsplash.com/photo-1534361960057-19889db9621e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1555596873-1916fae19257?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cG9vZGxlfGVufDB8fDB8fHww'
 ];
 
 
 ---
+<style>
+    .swiper {
+    width: 100vw;
+    height: 46vh;
+    margin: auto;
+    overflow: hidden;
+  }
+  @media (max-width: 768px) {
+    .swiper {
+      height: 40vh;
+    }
+  }
+</style>
 
-<!-- Main content area with padding to account for fixed header and sidebar -->
 <Navbar />
 <div class="relative py-26 h-[calc(100vh-4rem)] z-20">
     <div class="fixed w-full max-w-screen px-4 sm:px-6 lg:px-8 h-screen flex items-center justify-center">  
-        <section class="relative min-h-[calc(100vh-4rem)]  pb-[15%] px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center    z-10 ">    
+        <section class="relative min-h-[calc(100vh-4rem)] pb-[15%] px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center z-10">    
          <h1 class="text-3xl font-bold text-center mb-12">App Manager</h1>
-            <div class="grid grid-cols-7 grid-rows-3 gap-4 w-full max-w-7xl">
-                <div data-id="1" class="col-start-2 col-span row-span-1 border-radius-lg overflow-hidden cursor-pointer">
-                    <Image class="object-cover" src={squarePlaceholder} alt="" width={1000} height={1000}/>
+            <div class="grid grid-cols-7 grid-rows-3 gap-2 w-full max-w-7xl aspect-[7/3]">
+                <!-- Fila 1 -->
+                <div class="col-start-2">
+                    <div data-id="1" class="w-full aspect-square border-radius-lg overflow-hidden cursor-pointer">
+                        <img src={images[0]} class="w-full h-full object-cover" alt="Labrador Retriever" />
+                    </div>
                 </div>
-
-                <div data-id="2" class="row-start-2 col-span-2 row-span-2 border-radius-lg overflow-hidden cursor-pointer">
-                    <Image class="object-cover"  src={squarePlaceholder} alt="" width={1000} height={1000}/>
+                
+                <!-- Fila 2 -->
+                <div class="row-start-2 col-span-2 row-span-2">
+                    <div data-id="2" class="w-full aspect-square border-radius-lg overflow-hidden cursor-pointer">
+                        <img src={images[1]} class="w-full h-full object-cover" alt="Pastor Alemán" />
+                    </div>
                 </div>
-
-                <div data-id="3" class="col-start-3 col-span-3 row-span-3 border-radius-lg overflow-hidden cursor-pointer">
-                    <Image class="object-cover" src={squarePlaceholder} alt="" width={1000} height={1000}/>
+                
+                <!-- Elemento central grande -->
+                <div class="row-span-3 col-span-3 row-start-1 col-start-3">
+                    <div data-id="3" class="w-full h-full border-radius-lg overflow-hidden cursor-pointer">
+                        <img src={images[2]} class="w-full h-full object-cover" alt="Bulldog Francés" />
+                    </div>
                 </div>
-
-                <div data-id="4" class="col-start-6 col-span-2 row-span-2 border-radius-lg overflow-hidden cursor-pointer" >
-                    <Image class="object-cover" src={squarePlaceholder} alt="" width={1000} height={1000}/>
+                
+                <!-- Columna derecha -->
+                <div class="row-span-2 col-span-2 col-start-6">
+                    <div data-id="4" class="w-full aspect-square border-radius-lg overflow-hidden cursor-pointer">
+                        <img src={images[3]} class="w-full h-full object-cover" alt="Golden Retriever" />
+                    </div>
                 </div>
-                <div data-id="5" class="col-start-6 col-span-1 row-span-1 border-radius-lg overflow-hidden cursor-pointer">
-                    <Image class="object-cover" src={squarePlaceholder} alt="" width={1000} height={1000}/>
+                
+                <div class="row-start-3 col-start-6">
+                    <div data-id="5" class="w-full aspect-square border-radius-lg overflow-hidden cursor-pointer">
+                        <img src={images[4]} class="w-full h-full object-cover" alt="Poodle" />
+                    </div>
                 </div>
             </div>
         </section>
@@ -51,31 +80,31 @@ const images = [
             <div class="w-full mx-auto">
                 <div class="flex flex-col lg:flex-row gap-8 w-full">
                     <div class="w-full lg:w-1/2">
-                        <div class="p-8 w-full">
+                        <div class="flex p-8 w-full flex-col text-left items-center">
                             <h2 id="section-title" class="text-4xl font-bold text-blue-950 mb-4">Selecciona una imagen</h2>
                             <p id="section-content" class="text-blue-950 text-lg">Haz clic en cualquiera de las imágenes para ver su contenido aquí.</p>
                         </div>
                         <div class="w-full">
-                            <ul class="flex flex-col gap-4 w-full">
+                            <ul class="flex flex-col gap-4 w-full max-w-2xl mx-auto text-left">
                                 <li class="flex items-baseline gap-2">
-                                    <h3 class="text-xl font-semibold text-blue-950">Descripción:</h3>
-                                    <span id="description" class="text-blue-950 text-lg"></span>
+                                    <h3 class="text-2xl font-semibold text-blue-950">Descripción:</h3>
+                                    <span id="description" class="text-blue-950 text-xl"></span>
                                 </li>
                                 <li class="flex items-baseline gap-2">
-                                    <h3 class="text-xl font-semibold text-blue-950">Tamaño:</h3>
-                                    <span id="size" class="text-blue-950 text-lg"></span>
+                                    <h3 class="text-2xl font-semibold text-blue-950">Tamaño:</h3>
+                                    <span id="size" class="text-blue-950 text-xl"></span>
                                 </li>
                                 <li class="flex items-baseline gap-2">
-                                    <h3 class="text-xl font-semibold text-blue-950">Origen:</h3>
-                                    <span id="origin" class="text-blue-950 text-lg"></span>
+                                    <h3 class="text-2xl font-semibold text-blue-950">Origen:</h3>
+                                    <span id="origin" class="text-blue-950 text-xl"></span>
                                 </li>
                                 <li class="flex items-baseline gap-2">
-                                    <h3 class="text-xl font-semibold text-blue-950">Uso común:</h3>
-                                    <span id="common-use" class="text-blue-950 text-lg"></span>
+                                    <h3 class="text-2xl font-semibold text-blue-950">Uso común:</h3>
+                                    <span id="common-use" class="text-blue-950 text-xl"></span>
                                 </li>
                                 <li class="flex items-baseline gap-2">
-                                    <h3 class="text-xl font-semibold text-blue-950">Hechos:</h3>
-                                    <span id="facts" class="text-blue-950 text-lg"></span>
+                                    <h3 class="text-2xl font-semibold text-blue-950">Hechos:</h3>
+                                    <span id="facts" class="text-blue-950 text-xl   "></span>
                                 </li>
                             </ul>
                         </div>
@@ -90,47 +119,56 @@ const images = [
                             onload="document.getElementById('image-container').style.display = 'flex';"
                         />
                     </div>
+                    
                 </div>
+                
             </div>
            
         </div>
-        <div id="carousel" class="w-full h-[calc(57vh-4rem)] bg-amber-400 p-4 rounded-lg shadow-md border border-gray-200 overflow-hidden flex flex-col mt-8 lg:mt-0 lg:sticky lg:top-8">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                  {images.map((src) => (
-                    <div class="swiper-slide">
-                      <img src={src} alt="Imagen del slider" class="w-full" />
-                    </div>
-                  ))}
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
-              </div>
-        </div>
+            
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper ">
+              <div class="swiper-slide flex items-center justify-center bg-gray-100 text-blue-800 rounded-lg">Slide 1</div>
+              <div class="swiper-slide flex items-center justify-center bg-gray-200 text-blue-800 rounded-lg">Slide 2</div>
+              <div class="swiper-slide flex items-center justify-center bg-gray-300 text-blue-800 rounded-lg">Slide 3</div>
+              <div class="swiper-slide flex items-center justify-center bg-gray-400 text-blue-800 rounded-lg">Slide 4</div>
+              <div class="swiper-slide flex items-center justify-center bg-gray-500 text-blue-800 rounded-lg">Slide 5</div>
+              <div class="swiper-slide flex items-center justify-center bg-gray-600 text-blue-800 rounded-lg">Slide 6</div>
+              <div class="swiper-slide flex items-center justify-center bg-gray-700 text-blue-100 rounded-lg">Slide 7</div>
+              <div class="swiper-slide flex items-center justify-center bg-gray-800 text-white rounded-lg">Slide 8</div>
+              <div class="swiper-slide flex items-center justify-center bg-black text-white rounded-lg">Slide 9</div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
     </div>
+
 </main>
 
-<script type="module" src="../scripts/image-onclick-handler.js" is:inline></script>
-<script>
-import Swiper from 'swiper';
-import 'swiper/css';
-import { Navigation, Pagination } from 'swiper/modules';
-const swiper = new Swiper('.swiper', {
-    modules: [Navigation, Pagination],
-    speed: 400,
-    spaceBetween: 100,
-    freeMode: true,
-      // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-    },  
+ <script type="module" src="../scripts/image-onclick-handler.js" is:inline></script>
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-});
-</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+  <script>
+import Swiper from 'swiper';
+import "swiper/css";
+
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      centeredSlides: true,
+      direction: 'horizontal',
+      freeMode: true,
+      loop: true,
+      grabCursor: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script> 
+
+</body>
+
+</html>
